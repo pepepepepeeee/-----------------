@@ -1,24 +1,4 @@
- // Función principal
-function main() {
-  console.log("El script se está ejecutando...");
-  // Aquí puedes poner el código que quieres que se ejecute cada 5 minutos
-}
 
-// Ejecución principal del script
-main();
-
-// Ejecutar la función principal cada 5 minutos (300000 milisegundos)
-const intervalId = setInterval(() => {
-  console.log("El script se está ejecutando nuevamente...");
-  main();
-}, 300000); // 300000 milisegundos = 5 minutos
-
-// Detener el script después de 5 minutos
-setTimeout(() => {
-  console.log("El script se va a detener ahora.");
-  clearInterval(intervalId); // Detener el intervalo
-  process.exit(0); // Finalizar el script
-}, 300000); // 300000 milisegundos = 5 minutos
 
 
 
