@@ -190,7 +190,7 @@ const GetVersion = require('./utils/version');
         });
 
               
-        const token = client.auth.auths.get("fortnite").token;
+        const token = client.auth.auths("fortnite").token;
         
 
         const TicketRequest = (
