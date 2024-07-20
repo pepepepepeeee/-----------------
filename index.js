@@ -217,7 +217,7 @@ const GetVersion = require('./utils/version');
               }
             )
           );
-console.log(`${client.auth.auths.get("fortnite")}`)
+
           console.log("TICKET REQUEST: " + TicketRequest)
 
           if (TicketRequest.status !== 200) {
