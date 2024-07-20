@@ -188,10 +188,10 @@ const GetVersion = require('./utils/version');
             query.append(`party.${PlatformName}`, "true")
           }
         });
-const logg = client.auth.auths.get("fortnite");
+
               
         const token = client.auth.auths.get("fortnite").token;
-        const id = client.auth.auths.get("fortnite").accountid;
+        
 
         const TicketRequest = (
                 
