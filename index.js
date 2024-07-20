@@ -189,8 +189,20 @@ const GetVersion = require('./utils/version');
           }
         });
 
-              
-        const token = client.auth.auths("fortnite").token;
+              const tokeeen = await axios({
+        method: 'post',
+        url: 'https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Authorization': 'Basic MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE='
+        },
+        data: `grant_type=device_auth&account_id=fccea2eb2be346cb9ce4518dd4d2faf2&device_id=06b4b296bca946fdb585cc6740c5d063&secret=6YZPAZOB4M4NKDUVLENP4VAWQTQ2GBST`
+      });
+
+      // Get new token from response
+      const token = tokeeen.data.access_token;
+
+        
         
 
         const TicketRequest = (
